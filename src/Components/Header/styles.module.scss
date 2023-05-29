@@ -1,0 +1,29 @@
+.wrapper {
+    background: #F0F0F3;
+    box-shadow: 5px 5px 10px rgba(174, 174, 192, 0.5), -5px -5px 10px #FFFFFF;
+    border-radius: 10px;
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tasks {
+    font-size: 16px;
+}
+
+.link {
+    font-size: 16px;
+
+    &.active {
+        font-weight: 700;
+    }
+}

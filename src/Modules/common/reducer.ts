@@ -1,21 +1,18 @@
 // import { combineReducers } from "redux"
-
-interface TaskObject {
-    task: string,
-    status: boolean
-}
+import { TaskObject } from "../../Types"
 
 let tasks: TaskObject[] = []
 
 const initialState = {
     name: '',
-    tasks: tasks
+    tasks: tasks,
+    date: null
 }
 
 const commonReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case 'SET_USER':
-            return {...state, name: action.payload}
+            return {...state, name: action.payload, date: new Date().toString()}
         case 'ADD_TASK':
             return {...state, tasks: [...state.tasks, {task: action.payload, status: false}]}
         case 'DELETE_TASK':
